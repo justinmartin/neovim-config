@@ -11,7 +11,7 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.formatting.conform" },
+    -- { import = "lazyvim.plugins.extras.formatting.conform" },
 
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
@@ -47,4 +47,9 @@ require("lazy").setup({
   },
 })
 
-require("mini.comment").setup()
+-- require("mini.comment").setup()
+require('mkdnflow').setup()
+
+require('telekasten').setup({
+  home = vim.fn.expand("~/personal_notes"), -- Put the name of your notes directory here
+})
